@@ -109,18 +109,18 @@ numberOfXmlFiles= len(listOfXmlFiles)
 
 allSentences=[]
 
-scheme=[0 for _ in range(n)]
-lexicalScheme=[0 for _ in range(n)]
-entityOneArray=['' for _ in range(n)]
-entityOneWholeWord=['' for _ in range(n)]
-verbComponent1=[set() for _ in range(n)]
-verbComponent2=[set() for _ in range(n)]
-component1Sentence=[set() for _ in range(n)]
-component2Sentence=[set() for _ in range(n)]
-discardedC1 = [set() for _ in range(n)]
-discardedC2 = [set() for _ in range(n)]
-synonymsComponent1=[{} for _ in range(n)]
-synonymsComponent2=[{} for _ in range(n)]
+scheme=[0 for _ in range(numberOfXmlFiles)]
+lexicalScheme=[0 for _ in range(numberOfXmlFiles)]
+entityOneArray=['' for _ in range(numberOfXmlFiles)]
+entityOneWholeWord=['' for _ in range(numberOfXmlFiles)]
+verbComponent1=[set() for _ in range(numberOfXmlFiles)]
+verbComponent2=[set() for _ in range(numberOfXmlFiles)]
+component1Sentence=[set() for _ in range(numberOfXmlFiles)]
+component2Sentence=[set() for _ in range(numberOfXmlFiles)]
+discardedC1 = [set() for _ in range(numberOfXmlFiles)]
+discardedC2 = [set() for _ in range(numberOfXmlFiles)]
+synonymsComponent1=[{} for _ in range(numberOfXmlFiles)]
+synonymsComponent2=[{} for _ in range(numberOfXmlFiles)]
 
 f2=open("winogradSolutions.txt") 
 lines=f2.readlines()    
@@ -139,7 +139,7 @@ if len(sys.argv) > 2:
         filtered = True
 
 #Go through each XML File, and extract Q and C
-for f in range(0, n):
+for f in range(0, numberOfXmlFiles):
     firstINindex=0
 
     print f
